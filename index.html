@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Showcase App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="appLoaded()" onunload="appUnloaded()" onscroll="scrollEvent()" onresize="resizeEvent()">
+    <header>
+        <h1>Event Showcase Web App</h1>
+        <h2>Demonstrating all the provided JavaScript events.</h2>
+    </header>
+    <center>
+        <h3>Event now : <span id="output"></span></h3>
+    </center>
+    <main>
+        <section id="mouse-events" class="event-section">
+            <h2>Mouse Events</h2>
+            <button id="click-btn" onclick="clickEvent()" onmousemove="mouseMoveEvent()">Click Me</button>
+            <div id="hover-box" class="hover-box" onmouseover="mouseOverEvent()" onmouseout="mouseOutEvent()" onmousedown="mouseDownEvent()" onmouseup="mouseUpEvent()">Hover over me</div>
+            <button id="dblclick-btn" ondblclick="dblClickEvent()">Double Click Me</button>
+        </section>
+
+        <section id="keyboard-events" class="event-section">
+            <h2>Keyboard Events</h2>
+            <input type="text" id="key-input" onkeydown="keyDownEvent()" onkeyup="keyUpEvent()" onkeypress="keyPressEvent()" placeholder="Type something...">
+        </section>
+
+        <section id="form-events" class="event-section">
+            <h2>Form Events</h2>
+            <form id="sample-form" onsubmit="formSubmitEvent(event)">
+                <input type="text" name="name" onfocus="focusEvent()" onblur="blurEvent()" oninput="inputEvent()" placeholder="Enter your name">
+                <select name="dropdown" id="dropdown" onchange="changeEvent()">
+                    <option value="1">1</option>
+                    <option value="1">2</option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="media-events" class="event-section">
+            <h2>Media Events</h2>
+            <video id="sample-video" controls onplay="playEvent()" onpause="pauseEvent()" onvolumechange="volumeChangeEvent()" onended="endedEvent()" width="300px" height="200px">
+                <source src="sample.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section id="clipboard-events" class="event-section">
+            <h2>Clipboard Events</h2>
+            <textarea id="clipboard-area" oncopy="copyEvent()" oncut="cutEvent()" onpaste="pasteEvent()" placeholder="Try copying, cutting, and pasting here..."></textarea>
+        </section>
+
+        <section id="drag-drop-events" class="event-section">
+            <h2>Drag & Drop Events</h2>
+            <div id="drag-box" draggable="true" ondrag="dragEvent()" ondragend="dragEndEvent()">Drag me!</div>
+            <div id="drop-area" ondragover="dragOverEvent(event)" ondrop="dropEvent(event)">Drop here</div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

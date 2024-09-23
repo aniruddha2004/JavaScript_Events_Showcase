@@ -1,0 +1,188 @@
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #6200ea, #3700b3);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #3700b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+/* Main Styling */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Event Section Styling */
+.event-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid #6200ea;
+}
+
+.event-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+.event-section h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #6200ea;
+    border-bottom: 2px solid #f0f2f5;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.event-section button,
+.event-section input,
+.event-section select,
+.event-section textarea,
+.event-section video {
+    width: 100%;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.event-section button {
+    padding: 15px 0;
+    background: #6200ea;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.event-section button:hover {
+    background: #3700b3;
+}
+
+.event-section input,  .event-section select{
+    padding: 12px 15px;
+    background: #f9f9f9;
+    border: 2px solid #ddd;
+    transition: border 0.3s ease;
+}
+
+.event-section input:focus {
+    border-color: #6200ea;
+    outline: none;
+}
+
+.event-section textarea {
+    padding: 15px;
+    height: 120px;
+    background: #f9f9f9;
+    border: 2px solid #ddd;
+    resize: vertical;
+    transition: border 0.3s ease;
+}
+
+.event-section textarea:focus {
+    border-color: #6200ea;
+    outline: none;
+}
+
+/* Hover Box Styling */
+.hover-box {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    background: #6200ea;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.hover-box:hover {
+    background: #3700b3;
+}
+
+/* Video Styling */
+video {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Clipboard Textarea Styling */
+#clipboard-area {
+    height: 150px;
+}
+
+/* Drag and Drop Styling */
+#drag-box, #drop-area {
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 2px dashed #6200ea;
+    background: #f9f9f9;
+    transition: background 0.3s ease;
+}
+
+#drag-box {
+    cursor: move;
+}
+
+#drop-area {
+    background-color: #e3f2fd;
+}
+
+#drop-area:hover {
+    background-color: #bbdefb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .event-section {
+        padding: 15px;
+    }
+}
